@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz & Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Interactive Quiz & Weather Dashboard</h1>
+        <p>Test your knowledge and check the weather</p>
+    </header>
+
+    <main>
+
+        <!-- QUIZ SECTION -->
+        <section class="card">
+
+            <h2>🎯 Interactive Quiz</h2>
+
+            <div id="quiz-container">
+
+                <h3 id="question">Question will appear here</h3>
+
+                <div id="answer-buttons"></div>
+
+                <button id="next-btn">Next Question</button>
+
+            </div>
+
+            <div id="result" class="hidden">
+                <h3>Quiz Completed!</h3>
+                <p id="score"></p>
+
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+
+        </section>
+
+
+        <!-- WEATHER SECTION -->
+        <section class="card">
+
+            <h2>🌤️ Weather Dashboard</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter city name"
+                >
+
+                <button onclick="getWeather()">Search</button>
+
+            </div>
+
+            <div id="weather-result">
+
+                <h3 id="city-name">Search for a city</h3>
+
+                <div id="weather-icon">🌤️</div>
+
+                <h2 id="temperature">-- °C</h2>
+
+                <p id="description">Weather information will appear here</p>
+
+                <div class="weather-details">
+
+                    <div>
+                        <h4>💧 Humidity</h4>
+                        <p id="humidity">--%</p>
+                    </div>
+
+                    <div>
+                        <h4>💨 Wind Speed</h4>
+                        <p id="wind">-- km/h</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Interactive Quiz & Weather Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
